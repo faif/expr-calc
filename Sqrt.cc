@@ -1,6 +1,6 @@
 /*
   Sqrt.cc A representation of the square root operator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -24,13 +24,9 @@
 #include <cmath>
 #include "Sqrt.h"
 
-using
-  std::string;
-using
-  std::stringstream;
-using
-  std::domain_error;
-
+using std::string;
+using std::stringstream;
+using std::domain_error;
 
 /**
  * Evaluation of the square root
@@ -41,12 +37,10 @@ using
  * @return the square root of
  * the expression.
  */
-
-double
-Sqrt::eval () const
+double Sqrt::eval() const
 {
   //\internal ensure that no negative number is given
-  double t_eval = u_exp->eval ();
+  double t_eval = u_exp->eval();
 
   if (t_eval < 0)
     {
@@ -54,10 +48,8 @@ Sqrt::eval () const
 			  "of a negative number!");
     }
 
-  return sqrt (t_eval);
+  return sqrt(t_eval);
 }
-
-
 
 
 /**
@@ -68,12 +60,7 @@ Sqrt::eval () const
  * @param e a pointer to the
  * expression
  */
-
-Sqrt::Sqrt (Expr * e):UnOp (e)
-{
-}
-
-
+Sqrt::Sqrt(Expr* e): UnOp(e) {}
 
 
 /**
@@ -84,9 +71,7 @@ Sqrt::Sqrt (Expr * e):UnOp (e)
  * instance of the square root
  * operator.
  */
-
-string
-Sqrt::strOperator () const
+string Sqrt::strOperator() const
 {
   return "sqrt";
 }

@@ -1,6 +1,6 @@
 /*
   Exp.h The skeleton of the exponential operator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -24,22 +24,18 @@
 #include <string>
 #include "UnOp.h"
 
-
 /**
  * Representation of the 
  * exponential unary operator. 
  */
-
-class Exp:public UnOp
+class Exp: public UnOp
 {
 public:
-  double eval () const;
+  double eval() const;
 
-    Exp (Expr *);
+  Exp(Expr* e);
 
-    std::string strOperator () const;
+  std::string strOperator() const;
 };
-
-
 
 #endif

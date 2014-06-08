@@ -1,6 +1,6 @@
 /*
   Exp.cc A representation of the exponential operator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -23,10 +23,8 @@
 #include <cmath>
 #include "Exp.h"
 
-using
-  std::string;
-using
-  std::stringstream;
+using std::string;
+using std::stringstream;
 
 
 /**
@@ -37,14 +35,10 @@ using
  * the expression - e (2.7182818) 
  * raised to the expression.
  */
-
-double
-Exp::eval () const
+double Exp::eval() const
 {
-  return exp (u_exp->eval ());
+  return exp(u_exp->eval());
 }
-
-
 
 
 /**
@@ -55,11 +49,7 @@ Exp::eval () const
  * @param e a pointer to the
  * expression
  */
-
-Exp::Exp (Expr * e):UnOp (e)
-{
-}
-
+Exp::Exp(Expr* e): UnOp(e) {}
 
 
 /**
@@ -69,9 +59,7 @@ Exp::Exp (Expr * e):UnOp (e)
  * @return a <i>string</i>
  * instance of the exponential operator.
  */
-
-string
-Exp::strOperator () const
+string Exp::strOperator() const
 {
   return "exp";
 }

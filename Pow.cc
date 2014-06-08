@@ -1,6 +1,6 @@
 /*
   Pow.cc A representation of the power operator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -24,10 +24,8 @@
 #include <cmath>
 #include "Pow.h"
 
-using
-  std::string;
-using
-  std::stringstream;
+using std::string;
+using std::stringstream;
 
 /**
  * Evaluation of the multiplication
@@ -36,14 +34,11 @@ using
  * @return the first expression raised
  * to the second expression. 
  */
-
 double
-Pow::eval () const
+Pow::eval() const
 {
-  return pow (left->eval (), right->eval ());
+  return pow(left->eval(), right->eval());
 }
-
-
 
 
 /**
@@ -56,12 +51,7 @@ Pow::eval () const
  * @param r a pointer to the
  * right epxression
  */
-
-Pow::Pow (Expr * l, Expr * r):BinOp (l, r)
-{
-}
-
-
+Pow::Pow(Expr* l, Expr* r): BinOp(l, r) {}
 
 /**
  * A string representation
@@ -70,9 +60,7 @@ Pow::Pow (Expr * l, Expr * r):BinOp (l, r)
  * @return a <i>string</i>
  * instance of the power operator.
  */
-
-string
-Pow::strOperator () const
+string Pow::strOperator() const
 {
   return "^";
 }

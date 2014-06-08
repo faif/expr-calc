@@ -1,6 +1,6 @@
 /*
   UnOp.h The skeleton of an unary operator in the expression calculator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -28,23 +28,21 @@
  * An abstract class representing the structure of an
  * unary operator in the expression calculator.
  */
-
-class UnOp:public Expr
+class UnOp: public Expr
 {
 protected:
-  Expr * u_exp;			/**< the expression of the operator */
+  Expr* u_exp;			/**< the expression of the operator */
 
 public:
-  UnOp ();
+  UnOp();
 
-  UnOp (Expr *);
+  UnOp(Expr* e);
 
-  virtual double eval () const = 0;
+  virtual double eval() const = 0;
 
-    std::string strOperator () const = 0;
+  virtual std::string strOperator() const = 0;
 
-    std::string toString () const;
+  std::string toString() const;
 };
-
 
 #endif

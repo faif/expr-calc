@@ -1,6 +1,6 @@
 /*
   BinOp.cc A binary operator in the expression calculator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -18,16 +18,12 @@
   <http://www.gnu.org/licenses/>.
 */
 
-
 #include <string>
 #include <sstream>
 #include "BinOp.h"
 
-using
-  std::string;
-using
-  std::stringstream;
-
+using std::string;
+using std::stringstream;
 
 /**
  * Initialisation of a binary operator.
@@ -37,13 +33,7 @@ using
  * @param r a pointer to the right sub-expression
  * of the operator
  */
-
-BinOp::BinOp (Expr * l, Expr * r):left (l), right (r)
-{
-}
-
-
-
+BinOp::BinOp(Expr* l, Expr* r): left(l), right(r) {}
 
 /**
  * A string representation
@@ -54,14 +44,12 @@ BinOp::BinOp (Expr * l, Expr * r):left (l), right (r)
  * expression, enclosed by
  * parenthesis.
  */
-
-string
-BinOp::toString () const
+string BinOp::toString() const
 {
   stringstream str;
 
-  str << "("
-    << left->toString () << strOperator () << right->toString () << ")";
+  str << "(" << left->toString() << strOperator()
+      << right->toString() << ")";
 
-  return str.str ();
+  return str.str();
 }

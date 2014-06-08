@@ -1,6 +1,6 @@
 /*
   Mult.h The skeleton of the multiplication operator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -24,22 +24,18 @@
 #include <string>
 #include "BinOp.h"
 
-
 /**
  * Representation of the 
  * multiplication binary operator. 
  */
-
-class Mult:public BinOp
+class Mult: public BinOp
 {
 public:
-  double eval () const;
+  double eval() const;
 
-    Mult (Expr *, Expr *);
+  Mult(Expr* l, Expr* r);
 
-    std::string strOperator () const;
+  std::string strOperator() const;
 };
-
-
 
 #endif

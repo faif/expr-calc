@@ -1,6 +1,6 @@
 /*
   Num.h The skeleton of a number representation in the expression calculator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -24,27 +24,25 @@
 #include <string>
 #include "Expr.h"
 
-
 /**
  * Representation of a floating point number
  * in the expression calculator.
  */
-
-class Num:public Expr
+class Num: public Expr
 {
 private:
   double value;			/**< the value of the number  */
 
 public:
-  double eval () const;
+  double eval() const;
 
-    std::string toString () const;
+  std::string toString() const;
 
-    std::string strOperator () const;
+  std::string strOperator() const;
 
-    Num ();
+  Num();
 
-    Num (double);
+  Num(double n);
 };
 
 

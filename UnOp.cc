@@ -1,6 +1,6 @@
 /*
   UnOp.cc An unary  operator in the expression calculator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -22,11 +22,8 @@
 #include <sstream>
 #include "UnOp.h"
 
-using
-  std::string;
-using
-  std::stringstream;
-
+using std::string;
+using std::stringstream;
 
 /**
  * Initialisation of an unary operator.
@@ -34,11 +31,7 @@ using
  * @param e a pointer to the expression
  * of the operator
  */
-
-UnOp::UnOp (Expr * e):u_exp (e)
-{
-}
-
+UnOp::UnOp(Expr* e): u_exp(e) {}
 
 
 /**
@@ -49,13 +42,11 @@ UnOp::UnOp (Expr * e):u_exp (e)
  * instance of the unary
  * operator.
  */
-
-string
-UnOp::toString () const
+string UnOp::toString() const
 {
   stringstream str;
 
-  str << strOperator () << "(" << u_exp->toString () << ")";
+  str << strOperator() << "(" << u_exp->toString() << ")";
 
-  return str.str ();
+  return str.str();
 }

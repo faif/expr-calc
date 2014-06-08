@@ -1,6 +1,6 @@
 /*
   Minus.h The skeleton of the minus operator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -29,17 +29,14 @@
  * Representation of the 
  * minus binary operator. 
  */
-
-class Minus:public BinOp
+class Minus: public BinOp
 {
 public:
-  double eval () const;
+  double eval() const;
 
-    Minus (Expr *, Expr *);
+  Minus(Expr* l, Expr* r);
 
-    std::string strOperator () const;
+  std::string strOperator() const;
 };
-
-
 
 #endif

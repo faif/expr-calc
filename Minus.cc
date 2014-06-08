@@ -1,6 +1,6 @@
 /*
   Minus.cc A representation of the minus operator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -23,12 +23,8 @@
 #include <sstream>
 #include "Minus.h"
 
-using
-  std::string;
-using
-  std::stringstream;
-
-
+using std::string;
+using std::stringstream;
 
 /**
  * Evaluation of the minus
@@ -37,15 +33,10 @@ using
  * @return the substraction result of
  * the left and right expressions. 
  */
-
-double
-Minus::eval () const
+double Minus::eval() const
 {
-  return (left->eval () - right->eval ());
+  return (left->eval() - right->eval());
 }
-
-
-
 
 /**
  * Initialisation of the Minus
@@ -57,11 +48,7 @@ Minus::eval () const
  * @param r a pointer to the
  * right epxression
  */
-
-Minus::Minus (Expr * l, Expr * r):BinOp (l, r)
-{
-}
-
+Minus::Minus(Expr* l, Expr* r): BinOp (l, r) {}
 
 
 /**
@@ -72,9 +59,7 @@ Minus::Minus (Expr * l, Expr * r):BinOp (l, r)
  * instance of the substraction
  * operator.
  */
-
-string
-Minus::strOperator () const
+string Minus::strOperator() const
 {
   return "-";
 }

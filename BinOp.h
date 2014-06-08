@@ -1,6 +1,6 @@
 /*
   BinOp.h The skeleton of a binary operator in the expression calculator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -24,26 +24,25 @@
 #include <string>
 #include "Expr.h"
 
-
 /**
  * An abstract class representing the structure of a
  * binary operator in the expression calculator.
  */
 
-class BinOp:public Expr
+class BinOp: public Expr
 {
 protected:
-  Expr * left;			/**< the left sub-expression of the operator */
-  Expr *right;			/**< the right sub-expression of the operator */
+  Expr* left;			/**< the left sub-expression of the operator */
+  Expr* right;			/**< the right sub-expression of the operator */
 
 public:
-    BinOp (Expr *, Expr *);
+    BinOp(Expr* l, Expr* r);
 
-  virtual double eval () const = 0;
+    virtual double eval() const = 0;
 
-    std::string strOperator () const = 0;
+    virtual std::string strOperator() const = 0;
 
-    std::string toString () const;
+    std::string toString() const;
 };
 
 #endif

@@ -1,6 +1,6 @@
 /*
   Mult.cc A representation of the multiplication operator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -18,15 +18,12 @@
   <http://www.gnu.org/licenses/>.
 */
 
-
 #include <string>
 #include <sstream>
 #include "Mult.h"
 
-using
-  std::string;
-using
-  std::stringstream;
+using std::string;
+using std::stringstream;
 
 /**
  * Evaluation of the multiplication
@@ -35,14 +32,10 @@ using
  * @return the multiplication result of
  * the left and right expressions. 
  */
-
-double
-Mult::eval () const
+double Mult::eval() const
 {
-  return (left->eval () * right->eval ());
+  return (left->eval() * right->eval());
 }
-
-
 
 
 /**
@@ -55,11 +48,7 @@ Mult::eval () const
  * @param r a pointer to the
  * right epxression
  */
-
-Mult::Mult (Expr * l, Expr * r):BinOp (l, r)
-{
-}
-
+Mult::Mult(Expr* l, Expr* r): BinOp(l, r) {}
 
 
 /**
@@ -70,9 +59,7 @@ Mult::Mult (Expr * l, Expr * r):BinOp (l, r)
  * instance of the multiplication
  * operator.
  */
-
-string
-Mult::strOperator () const
+string Mult::strOperator() const
 {
   return "*";
 }

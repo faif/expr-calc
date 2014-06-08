@@ -1,6 +1,6 @@
 /*
   Plus.cc A representation of the plus operator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -22,11 +22,8 @@
 #include <sstream>
 #include "Plus.h"
 
-using
-  std::string;
-using
-  std::stringstream;
-
+using std::string;
+using std::stringstream;
 
 /**
  * Evaluation of the plus
@@ -35,14 +32,10 @@ using
  * @return the addition result of
  * the left and right expressions. 
  */
-
-double
-Plus::eval () const
+double Plus::eval() const
 {
-  return (left->eval () + right->eval ());
+  return (left->eval() + right->eval());
 }
-
-
 
 /**
  * Initialisation of the Plus 
@@ -54,13 +47,7 @@ Plus::eval () const
  * @param r a pointer to the
  * right epxression
  */
-
-Plus::Plus (Expr * l, Expr * r):BinOp (l, r)
-{
-}
-
-
-
+Plus::Plus(Expr* l, Expr* r): BinOp(l, r) {}
 
 /**
  * A string representation
@@ -70,9 +57,7 @@ Plus::Plus (Expr * l, Expr * r):BinOp (l, r)
  * instance of the addition
  * operator.
  */
-
-string
-Plus::strOperator () const
+string Plus::strOperator() const
 {
   return "+";
 }

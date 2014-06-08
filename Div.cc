@@ -1,6 +1,6 @@
 /*
   Div.cc A representation of the division operator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -23,13 +23,9 @@
 #include <stdexcept>
 #include "Div.h"
 
-using
-  std::string;
-using
-  std::stringstream;
-using
-  std::domain_error;
-
+using std::string;
+using std::stringstream;
+using std::domain_error;
 
 /**
  * Evaluation of the multiplication
@@ -40,22 +36,18 @@ using
  * @return the division result of
  * the left and right expressions.
  */
-
-double
-Div::eval () const
+double Div::eval() const
 {
   //\internal ensure that no division by zero occurs
-  double r_eval = right->eval ();
+  double r_eval = right->eval();
 
   if (r_eval == 0)
     {
-      throw domain_error ("Are you trying to divide by zero?");
+      throw domain_error("Are you trying to divide by zero?");
     }
 
-  return (left->eval () / r_eval);
+  return (left->eval() / r_eval);
 }
-
-
 
 
 /**
@@ -68,11 +60,7 @@ Div::eval () const
  * @param r a pointer to the
  * right epxression
  */
-
-Div::Div (Expr * l, Expr * r):BinOp (l, r)
-{
-}
-
+Div::Div(Expr* l, Expr* r): BinOp(l, r) {}
 
 
 /**
@@ -83,9 +71,7 @@ Div::Div (Expr * l, Expr * r):BinOp (l, r)
  * instance of the division
  * operator.
  */
-
-string
-Div::strOperator () const
+string Div::strOperator() const
 {
   return "/";
 }

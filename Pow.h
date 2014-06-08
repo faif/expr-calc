@@ -1,6 +1,6 @@
 /*
   Pow.h The skeleton of the power operator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -24,22 +24,18 @@
 #include <string>
 #include "BinOp.h"
 
-
 /**
  * Representation of the 
  * power binary operator. 
  */
-
-class Pow:public BinOp
+class Pow: public BinOp
 {
 public:
-  double eval () const;
+  double eval() const;
 
-    Pow (Expr *, Expr *);
+  Pow(Expr* l, Expr* r);
 
-    std::string strOperator () const;
+  std::string strOperator() const;
 };
-
-
 
 #endif

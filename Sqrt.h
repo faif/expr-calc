@@ -1,6 +1,6 @@
 /*
   Sqrt.h The skeleton of the square root operator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -24,22 +24,18 @@
 #include <string>
 #include "UnOp.h"
 
-
 /**
  * Representation of the 
  * square root unary operator. 
  */
-
-class Sqrt:public UnOp
+class Sqrt: public UnOp
 {
 public:
-  double eval () const;
+  double eval() const;
 
-    Sqrt (Expr *);
+  Sqrt(Expr* e);
 
-    std::string strOperator () const;
+  std::string strOperator() const;
 };
-
-
 
 #endif

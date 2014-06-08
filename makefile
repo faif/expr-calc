@@ -1,5 +1,5 @@
 #    makefile Automatic project build file
-#    Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period org> 
+#    Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
 
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -13,8 +13,6 @@
 
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-
 
 CPP=g++				# full compile (assemble, link)
 CC=g++ -c 			# compile, assemble, but do not link
@@ -52,11 +50,11 @@ Plus.o:		Plus.cc Plus.h
 Minus.o:        Minus.cc Minus.h
 		$(CC) Minus.cc
 
-Mult.o:        Mult.cc Mult.h
+Mult.o:         Mult.cc Mult.h
 		$(CC) Mult.cc
 
 Div.o:        	Div.cc Div.h
 		$(CC) Div.cc
 
 clean:
-	$(RM) *.o expr_calc
+		$(RM) *.o expr_calc

@@ -1,6 +1,6 @@
 /*
   Div.h The skeleton of the division operator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -24,20 +24,19 @@
 #include <string>
 #include "BinOp.h"
 
-
 /**
  * Representation of the 
  * division binary operator. 
  */
 
-class Div:public BinOp
+class Div: public BinOp
 {
 public:
-  double eval () const;
+  double eval() const;
 
-    Div (Expr *, Expr *);
+  Div(Expr* l, Expr* r);
 
-    std::string strOperator () const;
+  std::string strOperator() const;
 };
 
 

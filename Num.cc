@@ -1,6 +1,6 @@
 /*
   Num.cc A number representation in the expression calculator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -18,17 +18,13 @@
   <http://www.gnu.org/licenses/>.
 */
 
-
 #include <iostream>
 #include <string>
 #include <sstream>
 #include "Num.h"
 
-using
-  std::string;
-using
-  std::stringstream;
-
+using std::string;
+using std::stringstream;
 
 /**
  * Evaluate the value of the
@@ -37,24 +33,16 @@ using
  * @return the value of the
  * numeric expression.
  */
-
-double
-Num::eval () const
+double Num::eval() const
 {
   return value;
 }
-
-
 
 /**
  * Default initialisation
  * of a numeric expression.
  */
-
-Num::Num ():value (0)
-{
-}
-
+Num::Num(): value(0) {}
 
 
 /**
@@ -64,13 +52,7 @@ Num::Num ():value (0)
  * @param n the value of the numeric
  * expression
  */
-
-Num::Num (double n):value (n)
-{
-}
-
-
-
+Num::Num(double n): value(n) {}
 
 /**
  * A string representation
@@ -80,17 +62,14 @@ Num::Num (double n):value (n)
  * instance of a numeric
  * expression.
  */
-
-string
-Num::toString () const
+string Num::toString() const
 {
   stringstream str;
 
   str << value;
 
-  return str.str ();
+  return str.str();
 }
-
 
 
 /**
@@ -101,9 +80,7 @@ Num::toString () const
  * instance of the expression's
  * operator.
  */
-
-string
-Num::strOperator () const
+string Num::strOperator() const
 {
   return "";
 }

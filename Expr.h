@@ -1,6 +1,6 @@
 /*
   Expr.h The skeleton of a basic expression in the expression calculator.
-  Copyright (C) 2008 Athanasios Kasampalis <faif at dtek period gr>
+  Copyright (C) 2008-14 Sakis Kasampalis <s.kasampalis@zoho.com>
   (this file is part of the expression calculator).
 
   The expression calculator is free software: you can redistribute it 
@@ -27,18 +27,17 @@
  * An abstract class representing the structure of a basic
  * expression in the expression calculator.
  */
-
 class Expr
 {
 public:
   /// Evaluation of  an expression
-  virtual double eval () const = 0;
+  virtual double eval() const = 0;
 
   /// A string representation of a formula
-  virtual std::string toString () const = 0;
+  virtual std::string toString() const = 0;
 
   /// A string representation of the operator used
-  virtual std::string strOperator () const = 0;
+  virtual std::string strOperator() const = 0;
 };
 
 #endif
